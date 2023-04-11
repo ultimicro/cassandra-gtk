@@ -1,24 +1,19 @@
 # Cassandra GTK
 
-This is a Linux application for Apache Cassandra written in Vala using GTK 4.
+This is a Linux application for Apache Cassandra written in C# using GTK 3.
 
 ## Development
 
 ### Prerequisites
 
-- Meson
-- Vala
+- .NET SDK 6.0 or later.
 
-### Build
-
-Generate build script to `build` directory:
+### Run
 
 ```sh
-meson init build
+./start.sh
 ```
 
-Start building:
+## License
 
-```sh
-meson compile -C build
-```
+GNU GPLv3
