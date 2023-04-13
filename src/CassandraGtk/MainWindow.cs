@@ -7,7 +7,7 @@ internal sealed class MainWindow : Window
     public MainWindow()
         : base(WindowType.Toplevel)
     {
-        this.Titlebar = CreateTitlebar();
+        this.Titlebar = this.CreateTitlebar();
     }
 
     protected override void OnDestroyed()
@@ -16,7 +16,7 @@ internal sealed class MainWindow : Window
         base.OnDestroyed();
     }
 
-    private static HeaderBar CreateTitlebar()
+    private HeaderBar CreateTitlebar()
     {
         // Create the bar.
         var bar = new HeaderBar()
@@ -26,13 +26,20 @@ internal sealed class MainWindow : Window
         };
 
         // Connect button.
-        var connect = new Button()
-        {
-            Label = "Connect",
-        };
+        var connect = new Button();
+
+        connect.Label = "Connect";
+        connect.Clicked += this.OpenConnection;
 
         bar.PackStart(connect);
 
         return bar;
+    }
+
+    private void OpenConnection(object? sender, EventArgs e)
+    {
+        var dialog = new OpenConnection(this);
+
+        dialog.ShowAll();
     }
 }
