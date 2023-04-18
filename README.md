@@ -1,6 +1,6 @@
 # Cassandra GTK
 
-This is a Linux application for Apache Cassandra written in C# using GTK 3.
+This is a Linux application for Apache Cassandra written in C# using GTK 4.
 
 ## Development
 

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GtkSourceSharp" Version="3.24.24.38" />
+    <PackageReference Include="GirCore.Gtk-4.0" Version="0.3.0" />
   </ItemGroup>
 
 </Project>
